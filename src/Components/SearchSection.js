@@ -17,7 +17,7 @@ const SearchSection = () => {
     const queryHandler = (event) => {
         setQuery(event.target.value);
     };
-    console.log(query);
+    // console.log(query);
     const filteredRockets = rockets.filter((rocket) => {
         return (
             rocket.rocket_name.toLowerCase().includes(query.toLowerCase()) ||
@@ -25,7 +25,7 @@ const SearchSection = () => {
         );
     });
     return (
-        <section className="section newsletter">
+        <section className="section newsletter" id="explore">
             <div className="newsletter__container container">
                 <h2 className="section__title">Exploring Together</h2>
                 <p className="newsletter__description">

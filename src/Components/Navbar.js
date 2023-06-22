@@ -9,7 +9,6 @@ const Navbar = () => {
     const nav_items = [
         { id: 1, link: "home" },
         { id: 2, link: "explore" },
-        { id: 3, link: "about" },
     ];
 
     const onUpdatedActiveLink = (value) => {
