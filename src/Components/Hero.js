@@ -5,22 +5,6 @@ import hero from "../assets/hero_img.gif";
 
 const Hero = () => {
     return (
-        // <section className="home" id="home">
-        //     <div className="home__container bd-grid">
-        //         <div className="home__data">
-        //             <h1 className="home__title">
-        //             Join the amazing galaxy world.
-        //             </h1>
-        //             <h2 className="home__subtitle">
-        //                  A world without limits,let's explore it together.
-        //             </h2>
-        //             <Link to="/explore" className="button">
-        //                 Explore
-        //             </Link>
-        //         </div>
-        //         <img src={hero} alt="" className="home__img" />
-        //     </div>
-        // </section>
         <section className="home" id="home">
             <div className="home__container container grid">
                 <img src={hero} alt="" className="home__img" />
@@ -33,7 +17,7 @@ const Hero = () => {
                         A world without limits, let's explore it together. An
                         astonishing and incredible journey to space.
                     </p>
-                    <a href="#about" className="button button--flex">
+                    <a href="#explore" className="button button--flex">
                         Explore
                         <i className="ri-arrow-right-down-line button__icon"></i>
                     </a>
