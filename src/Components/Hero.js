@@ -1,9 +1,11 @@
 import React from "react";
 import "./Hero.css";
 // import { Link } from "react-router-dom";
+
 import hero from "../assets/hero_img.gif";
 
 const Hero = () => {
+
     return (
         <section className="home" id="home">
             <div className="home__container container grid">

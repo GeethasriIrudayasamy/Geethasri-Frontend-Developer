@@ -4,16 +4,11 @@ import "./Navbar.css";
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
-    const [activeLink, setActiveLink] = useState("home");
 
     const nav_items = [
         { id: 1, link: "home" },
         { id: 2, link: "explore" },
     ];
-
-    const onUpdatedActiveLink = (value) => {
-        setActiveLink(value);
-    };
 
     const menuHandler = () => {
         setShowMenu((prevValue) => !prevValue);
@@ -36,14 +31,7 @@ const Navbar = () => {
                             <li className="nav__item" key={item.id}>
                                 <a
                                     href={`#${item.link}`}
-                                    className={
-                                        activeLink === `${item.link}`
-                                            ? "nav__link active-link"
-                                            : "nav__link"
-                                    }
-                                    onClick={() =>
-                                        onUpdatedActiveLink(`${item.link}`)
-                                    }
+                                    className={"nav__link"}
                                 >
                                     {item.link}
                                 </a>
