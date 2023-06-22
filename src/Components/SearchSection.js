@@ -12,7 +12,7 @@ const SearchSection = () => {
         dispatch(loadrockets());
     }, [dispatch]);
 
-    console.log(rockets);
+    // console.log(rockets);
     const [query, setQuery] = useState("");
     const queryHandler = (event) => {
         setQuery(event.target.value);
