@@ -2,7 +2,7 @@ import React from "react";
 import "./Modal.css";
 
 const Modal = (props) => {
-    console.log(props.data);
+    // console.log(props.data);
     return (
         <div className="modal">
             <div className="modal-content">

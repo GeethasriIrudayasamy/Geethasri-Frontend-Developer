@@ -14,7 +14,7 @@ const DataGrid = (props) => {
 
     const individualDetails = (value) => {
         toggleModal();
-        console.log(value);
+        // console.log(value);
         setSingleData(value);
     };
 

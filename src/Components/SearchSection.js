@@ -7,6 +7,7 @@ import "./SearchSection.css";
 const SearchSection = () => {
     const dispatch = useDispatch();
     const rockets = useSelector((state) => state.list);
+    const [search, setSearch] = useState(false);
 
     useEffect(() => {
         dispatch(loadrockets());
@@ -15,8 +16,11 @@ const SearchSection = () => {
     // console.log(rockets);
     const [query, setQuery] = useState("");
     const queryHandler = (event) => {
+        event.preventDefault();
         setQuery(event.target.value);
+        setSearch(true);
     };
+
     // console.log(query);
     const filteredRockets = rockets.filter((rocket) => {
         return (
@@ -37,10 +41,21 @@ const SearchSection = () => {
                         type="text"
                         placeholder="Search"
                         className="newsletter__input"
+                        value={query}
                         onChange={queryHandler}
                     />
-                    <button className="button search">
-                        <box-icon name="search" color="white"></box-icon>
+                    <button
+                        className="button search"
+                        onClick={(event) => {
+                            event.preventDefault();
+                            setQuery("");
+                            setSearch(false);
+                        }}
+                    >
+                        <box-icon
+                            name={!search ? "search" : "x"}
+                            color="white"
+                        ></box-icon>
                     </button>
                 </form>
             </div>

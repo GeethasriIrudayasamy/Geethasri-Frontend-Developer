@@ -48,6 +48,13 @@
     }
 }
 
+@media screen and (max-width: 576px) {
+    .rocket__container {
+        grid-template-columns: repeat(2, 0.8fr);
+        justify-content: center;
+    }
+}
+
 @media screen and (min-width: 767px) {
     .rocket__container {
         grid-template-columns: repeat(3, 200px);
